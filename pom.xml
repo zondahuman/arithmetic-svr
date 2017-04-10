@@ -6,8 +6,10 @@
 
     <groupId>com.abin.lee</groupId>
     <artifactId>arithmetic-svr</artifactId>
-    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
     <modules>
         <module>arithmetic-sort</module>
         <module>arithmetic-common</module>
