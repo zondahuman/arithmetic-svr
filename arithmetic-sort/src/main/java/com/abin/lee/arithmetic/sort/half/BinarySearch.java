@@ -12,6 +12,8 @@ public class BinarySearch {
         Integer target = 5;
         Integer result = cycleSearch(input, target);
         System.out.println("result="+result);
+        Integer result1 = recursiveSearch(input, 0,input.length-1, target);
+        System.out.println("result1="+result1);
     }
 
     public static int cycleSearch(int[] input, int param){
@@ -39,7 +41,7 @@ public class BinarySearch {
             }else if(input[middle] > param){
                 return recursiveSearch(input,low,middle-1,param);
             }else{
-                return recursiveSearch(input,low,middle-1,param);
+                return recursiveSearch(input,low+1,high,param);
             }
         }
         return -1;

@@ -13,6 +13,7 @@
     <modules>
         <module>arithmetic-sort</module>
         <module>arithmetic-common</module>
+        <module>arithmetic-special</module>
     </modules>
 
 
