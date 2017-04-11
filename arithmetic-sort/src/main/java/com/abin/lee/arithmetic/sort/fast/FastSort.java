@@ -13,7 +13,8 @@ import com.abin.lee.arithmetic.common.util.JsonUtil;
 public class FastSort {
     public static void main(String[] args) {
         int[] input = new int[]{9,1,8,5,7,2,3,6,4};
-        fast(input,0 ,input.length-1);
+        fast(input,1 ,input.length);
+//        fast(input,0 ,input.length-1);
         System.out.println("input=" + JsonUtil.toJson(input));
     }
 
@@ -28,7 +29,7 @@ public class FastSort {
         int temp = 0;
         int datum = input[low] ; //基准数
 
-        while(start != end){
+        while(start < end){
             while(input[end]>=datum && start<end)
                 end--;
             while(input[start]<=datum && start<end)
