@@ -31,10 +31,16 @@ public class BinarySearch {
         return -1;
     }
 
-    public static int recursiveSearch(int[] input, int low, int high){
+    public static int recursiveSearch(int[] input, int low, int high, int param){
         if(low < high){
             int middle = (low+high)/2;
-
+            if(input[middle] == param){
+                return middle+1;
+            }else if(input[middle] > param){
+                return recursiveSearch(input,low,middle-1,param);
+            }else{
+                return recursiveSearch(input,low,middle-1,param);
+            }
         }
         return -1;
     }
