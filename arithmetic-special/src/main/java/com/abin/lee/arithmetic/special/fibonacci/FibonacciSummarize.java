@@ -8,9 +8,22 @@ package com.abin.lee.arithmetic.special.fibonacci;
 public class FibonacciSummarize {
 
     public static void main(String[] args) {
-
+        int input = 6 ;
+        Integer result = fibonacci(input);
+        System.out.println("result="+result);
     }
 
+    /**
+     * 1、1、2、3、5、8、13、21、……
+     * @param n
+     * @return
+     */
+    public static int fibonacci(int n){
+        if(n==2 || n==1)
+            return 1;
+        else
+            return fibonacci(n-1)+fibonacci(n-2);
+    }
 
 
 
