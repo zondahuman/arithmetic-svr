@@ -17,11 +17,11 @@
 
 
     <dependencies>
-        <dependecy>
+        <dependency>
             <groupId>com.abin.lee</groupId>
             <artifactId>arithmetic-common</artifactId>
             <version>${project.version}</version>
-        </dependecy>
+        </dependency>
     </dependencies>
 
 
