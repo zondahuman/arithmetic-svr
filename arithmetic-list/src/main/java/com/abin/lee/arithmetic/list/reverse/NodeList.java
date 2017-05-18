@@ -10,7 +10,7 @@ public class NodeList {
 
     public static Node cycleReverse(Node head) {
         if (null == head)
-            return null;
+            return head;
         Node pre = head;
         Node cur = head.getNext();
         Node temp = null;
@@ -23,6 +23,17 @@ public class NodeList {
         head.setNext(null);
         return pre;
     }
+
+    public static Node recursiveReverse(Node head) {
+        if (null == head || head.getNext() == null)
+            return head;
+        Node reHead = recursiveReverse(head.getNext());
+        head.getNext().setNext(head);
+        head.setNext(null);
+        return reHead;
+    }
+
+
 
     public static void main(String[] args) {
         Node head = new Node(0);
@@ -41,8 +52,8 @@ public class NodeList {
             h = h.getNext();
         }
         // 调用反转方法
-        // head = reverse1(head);
-        head = cycleReverse(head);
+         head = recursiveReverse(head);
+//        head = cycleReverse(head);
 
         System.out.println("\n**************************");
         // 打印反转后的结果
