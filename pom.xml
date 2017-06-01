@@ -15,6 +15,7 @@
         <module>arithmetic-common</module>
         <module>arithmetic-special</module>
         <module>arithmetic-list</module>
+        <module>arithmetic-tree</module>
     </modules>
 
 
