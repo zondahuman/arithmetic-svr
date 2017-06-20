@@ -1,5 +1,7 @@
 package com.abin.lee.arithmetic.tree.traversal;
 
+import com.abin.lee.arithmetic.common.util.JsonUtil;
+
 import java.util.ArrayDeque;
 
 /**
@@ -37,10 +39,12 @@ public class AdvanceTraversal {
     }
 
     public static void depthTraversal() {
+        System.out.println("root==" + JsonUtil.toJson(root));
         if (null == root)
             return;
         ArrayDeque<TreeNode> stack = new ArrayDeque<TreeNode>();
         stack.push(root);
+        System.out.println("stack==" + JsonUtil.toJson(stack));
         while (stack.isEmpty() == false) {
             TreeNode treeNode = stack.pop();
             System.out.print(treeNode.value+"    ");
@@ -69,6 +73,7 @@ public class AdvanceTraversal {
     public static void main(String[] args) {
         int[] arr={0,13,65,5,97,25,0,37,22,0,4,28,0,0,32,0};
         AdvanceTraversal tree=new AdvanceTraversal(arr);
+        System.out.println("root==---------" + JsonUtil.toJson(root));
         tree.depthTraversal();
         tree.spanTraversal();
     }
