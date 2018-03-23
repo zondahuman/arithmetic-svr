@@ -1,4 +1,4 @@
-package com.abin.lee.arithmetic.tree.traversal;
+package com.abin.lee.arithmetic.tree.traversal.common;
 
 /**
  * Created by abin on 2017/7/20 2017/7/20.
