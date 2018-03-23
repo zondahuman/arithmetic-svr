@@ -11,6 +11,8 @@ public class FibonacciSummarize {
         int input = 6 ;
         Integer result = fibonacci(input);
         System.out.println("result="+result);
+        Integer result1 = dynamicFibonacci(input);
+        System.out.println("result1="+result1);
     }
 
     /**
@@ -27,6 +29,16 @@ public class FibonacciSummarize {
 
 
 
-
+    public static int dynamicFibonacci(int input){
+        int one = 1 ;
+        int two = 1;
+        int temp = 0;
+        for (int i = 3; i <= input ; i++) {
+            temp = one + two;
+            one = two;
+            two = temp;
+        }
+        return temp;
+    }
 
 }
